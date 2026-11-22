@@ -6,16 +6,31 @@ from pathlib import Path
 import shutil
 import tempfile
 import threading
-from playwright.sync_api import sync_playwright, expect
 ROOT=Path(__file__).resolve().parents[1]
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
 
+def synthetic_snapshot():
+    """Independent test data: never inherits source-capture metadata or scope."""
+    return {
+        'schema':1,'status':'ready','captured_at':'2026-02-28T12:00:00Z','window_days':30,
+        'sites':[
+            {'key':'west','name':'Synthetic west test location','url':'https://ebird.org/hotspot/L1'},
+            {'key':'east','name':'Synthetic east test location','url':'https://ebird.org/hotspot/L2'},
+        ],
+        'sources':[],'coverage':'Synthetic browser-test fixture only; not source observations.',
+        'warnings':['Synthetic test data, used only by CI.'],
+        'records':[
+            {'id':'testone','name':'Test Shared Bird','scientific_name':'Testus communis','west':{'date':'2026-02-27','count':2,'notable':False,'checklist':'https://ebird.org/checklist/S1'},'east':{'date':'2026-02-26','count':None,'notable':True,'checklist':'https://ebird.org/checklist/S2'}},
+            {'id':'testtwo','name':'<img src=x onerror=alert(1)>','scientific_name':'Testus localis','west':{'date':'2026-02-20','count':1,'notable':False,'checklist':'https://ebird.org/checklist/S3'},'east':None},
+        ],
+    }
+
+
 def main():
+    from playwright.sync_api import sync_playwright, expect
     screenshots=ROOT/'browser-checks';screenshots.mkdir(exist_ok=True)
-    sample=json.loads((ROOT/'data/current.json').read_text());sample.update(status='ready',captured_at='2026-02-28T12:00:00Z',records=[
-        {'id':'testone','name':'Test Shared Bird','scientific_name':'Testus communis','west':{'date':'2026-02-27','count':2,'notable':False,'checklist':'https://ebird.org/checklist/S1'},'east':{'date':'2026-02-26','count':None,'notable':True,'checklist':'https://ebird.org/checklist/S2'}},
-        {'id':'testtwo','name':'<img src=x onerror=alert(1)>','scientific_name':'Testus localis','west':{'date':'2026-02-20','count':1,'notable':False,'checklist':'https://ebird.org/checklist/S3'},'east':None}])
+    sample=synthetic_snapshot()
     with tempfile.TemporaryDirectory() as temp:
         shutil.copytree(ROOT/'dist',Path(temp)/'hotspotledger');server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=temp));threading.Thread(target=server.serve_forever,daemon=True).start()
         try:
@@ -23,7 +38,8 @@ def main():
                 browser=p.chromium.launch();page=browser.new_page(viewport={'width':1280,'height':1000});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
                 page.goto(f'http://127.0.0.1:{server.server_port}/hotspotledger/');page.wait_for_function("!document.querySelector('#status').textContent.includes('Loading')")
                 page.locator('#import-file').set_input_files({'name':'synthetic-test-only.json','mimeType':'application/json','buffer':json.dumps(sample).encode()})
-                page.wait_for_function("document.querySelector('#status').textContent.includes('LOCAL FILE')")
+                expect(page.locator('#import-status')).to_contain_text('Opened synthetic-test-only.json')
+                expect(page.locator('#status')).to_contain_text('LOCAL FILE')
                 assert page.locator('#rows tr').count()==2
                 assert page.locator('#shared-total').inner_text()=='1'
                 assert page.locator('#rows img').count()==0
