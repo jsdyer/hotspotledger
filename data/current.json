@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "collector_version": 1,
+  "status": "awaiting_source",
+  "captured_at": null,
+  "window_days": 30,
+  "records": [],
+  "sites": [
+    {
+      "key": "west",
+      "label": "Iona Beach",
+      "region": "CA-BC",
+      "province": "British Columbia",
+      "coast": "Pacific",
+      "id": null,
+      "name": "Exact eBird hotspot pending first collection",
+      "url": "https://ebird.org/hotspots"
+    },
+    {
+      "key": "east",
+      "label": "Hartlen Point",
+      "region": "CA-NS",
+      "province": "Nova Scotia",
+      "coast": "Atlantic",
+      "id": null,
+      "name": "Exact eBird hotspot pending first collection",
+      "url": "https://ebird.org/hotspots"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+      "retrieved_at": null
+    }
+  ],
+  "attribution": "Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.",
+  "terms_url": "https://www.birds.cornell.edu/home/ebird-data-access-terms-of-use/",
+  "coverage": "Two exact hotspots; latest report per species within the previous 30 days.",
+  "warnings": [
+    "No eBird source capture is saved yet. The first scheduled collection requires the repository EBIRD_API_KEY secret. No demonstration observations are displayed."
+  ]
+}

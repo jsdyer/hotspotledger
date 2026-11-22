@@ -1,21 +1,9 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import { cleanLines } from '../web/model.mjs';
-test('trims, removes blanks and preserves first-seen order', () => {
-  assert.deepEqual(cleanLines('  Halifax\nLangley\nHalifax\n\nVancouver  '), {
-    text: 'Halifax\nLangley\nVancouver', count: 3, removed: 1,
-  });
-});
-test('supports Windows and old Mac line endings', () => {
-  assert.equal(cleanLines('a\r\nb\ra').text, 'a\nb');
-});
-test('empty text and whitespace produce an empty result', () => {
-  assert.deepEqual(cleanLines(' \n\t'), { text: '', count: 0, removed: 0 });
-});
-test('preserves case and Unicode', () => {
-  assert.equal(cleanLines('Québec\nquébec\n東京\nQuébec').text, 'Québec\nquébec\n東京');
-});
-test('treats markup as ordinary text', () => {
-  assert.equal(cleanLines('<script>alert(1)</script>\n<script>alert(1)</script>').text, '<script>alert(1)</script>');
-});
-test('rejects non-text input', () => { assert.throws(() => cleanLines(null), TypeError); });
+import test from 'node:test';import assert from 'node:assert/strict';import {validate,filterRows,summarize,toCSV,importText,parseCSV,csvCell} from '../web/model.mjs';
+const obs=(date,count=2,notable=false)=>({date,count,notable,checklist:'https://ebird.org/checklist/S123',reviewed:true,valid:true});
+const data={schema:1,status:'ready',captured_at:'2026-02-28T12:00:00Z',sites:[{key:'west'},{key:'east'}],records:[{id:'mallar3',name:'Mallard',scientific_name:'Anas platyrhynchos',west:obs('2026-02-27 08:00'),east:obs('2026-02-20',null)},{id:'sposan',name:'Spotted Sandpiper',scientific_name:'Actitis macularius',west:null,east:obs('2026-02-25',1,true)},{id:'amecro',name:'American Crow',scientific_name:'Corvus brachyrhynchos',west:obs('2026-02-01'),east:null}]};
+test('matching compares species codes and shorter windows change shared status',()=>{assert.deepEqual(summarize(filterRows(data)),{west:2,east:2,shared:1,notable:1});assert.equal(filterRows(data,{scope:'shared'}).length,1);assert.equal(filterRows(data,{scope:'shared',days:7}).length,0);assert.equal(filterRows(data,{scope:'west',days:7})[0].id,'mallar3');});
+test('notable flags come from the source and text search supports scientific names',()=>{assert.equal(filterRows(data,{scope:'notable'})[0].id,'sposan');assert.equal(filterRows(data,{query:'ANAS'})[0].id,'mallar3');assert.equal(filterRows(data,{query:'nothing'}).length,0);});
+test('derived CSV retains null counts, flags, sources and collection date on round trip',()=>{const csv=toCSV(data.records,data);assert.ok(csv.includes('ebird-data-access-terms-of-use'));assert.equal(parseCSV(csv).length,3);const result=importText(csv,'view.csv',data);assert.deepEqual(result.records.map(r=>[r.id,r.west?.count,r.east?.count]),data.records.map(r=>[r.id,r.west?.count,r.east?.count]));assert.equal(result.records[1].east.notable,true);});
+test('import rejects duplicate identities, unsafe links, and invalid counts',()=>{assert.throws(()=>validate({...data,records:[data.records[0],data.records[0]]}),/duplicate/);assert.throws(()=>validate({...data,records:[{...data.records[0],west:{...obs('2026-02-27'),checklist:'javascript:alert(1)'}}]}),/checklist/);assert.throws(()=>validate({...data,records:[{...data.records[0],west:obs('2026-02-27',-1)}]}),/count/);});
+test('CSV handles quotes/newlines and neutralizes spreadsheet formulas',()=>{assert.equal(csvCell('=CMD()'),'"\'=CMD()"');const r={...data.records[0],name:'A "quoted",\nname'};assert.equal(importText(toCSV([r],data),'x.csv',data).records[0].name,r.name);assert.throws(()=>parseCSV('"bad'),/quote/);});
+test('uncollected dataset is explicit and stays empty',()=>{const d={...data,status:'awaiting_source',captured_at:null,records:[]};assert.equal(validate(d).records.length,0);assert.equal(filterRows(d).length,0);});

@@ -1,37 +1,27 @@
-import { cleanLines } from './model.mjs';
-const input = document.querySelector('#input');
-const output = document.querySelector('#output');
-const status = document.querySelector('#status');
-const copy = document.querySelector('#copy');
-function update() {
-  const result = cleanLines(input.value);
-  output.value = result.text;
-  status.textContent = `${result.count} unique ${result.count === 1 ? 'line' : 'lines'}; ${result.removed} ${result.removed === 1 ? 'duplicate' : 'duplicates'} removed.`;
-  copy.disabled = result.count === 0;
+import {validate,filterRows,windowRows,summarize,toCSV,importText} from './model.mjs';
+const $=s=>document.querySelector(s);let published=null,data=null,local=false,visible=[];
+const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=value;if(cls)e.className=cls;return e;};
+function sourceLink(href,label){const a=text('a',label);a.href=href;a.target='_blank';a.rel='noopener noreferrer';return a;}
+function render(){
+  if(!data)return;const opts={days:$('#days').value,query:$('#query').value,scope:$('#scope').value,sort:$('#sort').value};visible=filterRows(data,opts);const sums=summarize(windowRows(data,Number(opts.days)));const ready=data.status==='ready';
+  for(const side of ['west','east']){const site=data.sites.find(s=>s.key===side);$('#'+side+'-total').textContent=ready?sums[side]:'—';$('#'+side+'-name').textContent=site?.name||'Exact hotspot not supplied';const link=$('#'+side+'-link');link.href=/^https:\/\/ebird\.org\/hotspot\/L\d+$/.test(site?.url)?site.url:'https://ebird.org/hotspots';}
+  $('#shared-total').textContent=ready?sums.shared:'—';$('#notable-total').textContent=ready?sums.notable:'—';
+  $('#status').classList.toggle('ready',ready);const age=ready?(Date.now()-Date.parse(data.captured_at))/86400000:0;
+  $('#status').textContent=ready?`${local?'LOCAL FILE · ':''}${age>2?'OLDER CAPTURE · ':''}Captured ${new Date(data.captured_at).toLocaleString(undefined,{timeZone:'UTC'})} UTC · ${data.records.length} species across both 30-day feeds. ${local?'Local file provenance has not been verified.':age>2?'Use the source links for newer reports.':'The latest saved capture; this page does not call eBird.'}`:'Awaiting the first eBird capture. No source observations have been saved yet. You can open a previous Hotspot Ledger file below.';
+  $('#result-count').textContent=ready?`${visible.length} species in this view · ${opts.days}-day window ending ${data.captured_at.slice(0,10)}`:'No source capture available';
+  $('#rows').replaceChildren();for(const r of visible){const tr=document.createElement('tr'),name=document.createElement('td');name.append(text('strong',r.name),text('em',r.scientific_name));tr.append(name);
+    for(const side of ['west','east']){const td=document.createElement('td'),o=r[side];if(o){td.append(text('span',o.date,'date'),text('span',o.count===null?'Count not supplied':`${o.count.toLocaleString()} ${o.count===1?'bird':'birds'} on checklist`,'count'),sourceLink(o.checklist,'View checklist ↗'));if(o.notable)td.append(text('span','Notable','badge notable'));}else td.append(text('span','Not reported in this window','absent'));tr.append(td);}
+    const status=document.createElement('td');status.append(text('span',r.west&&r.east?'Both coasts':r.west?'Iona feed':'Hartlen feed','badge'));tr.append(status);$('#rows').append(tr);
+  }
+  $('#empty').hidden=visible.length>0;$('#empty-title').textContent=ready?'No species match this view.':'Waiting for the first field notes.';$('#empty-copy').textContent=ready?'Try another comparison, widen the date window, or clear your search. No returned report does not prove that a bird was absent.':'The scheduled collector will save the first real eBird snapshot after its repository credential is configured. There are no simulated bird reports in this view.';
+  $('#export-csv').disabled=!ready||!visible.length;$('#export-json').disabled=!ready;$('#captured').textContent=ready?data.captured_at:'Not collected yet';$('#coverage').textContent=data.coverage||'Local comparison file';$('#restore').hidden=!local;
+  $('#source-list').replaceChildren();for(const s of data.sources||[]){if(!/^https:\/\/(api\.ebird\.org|documenter\.getpostman\.com)\//.test(s.url))continue;const li=document.createElement('li');li.append(sourceLink(s.url,s.url.replace('https://api.ebird.org/v2/','')));if(s.rows!==undefined)li.append(text('span',` · ${s.rows} source rows`));$('#source-list').append(li);}
 }
-input.addEventListener('input', update);
-document.querySelector('#sample').addEventListener('click', () => {
-  input.value = '  Halifax\nLangley\nHalifax\n\nVancouver  ';
-  update();
-});
-document.querySelector('#clear').addEventListener('click', () => {
-  input.value = '';
-  update();
-  input.focus();
-});
-if (navigator.clipboard && window.isSecureContext) {
-  copy.hidden = false;
-  copy.disabled = true;
-  copy.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(output.value);
-      status.textContent = 'Result copied.';
-    } catch {
-      output.focus();
-      output.select();
-      status.textContent = 'Copy was unavailable. The result is selected so you can copy it manually.';
-    }
-  });
-}
-// Namespace future preference storage as coolcode:<tool-id>:<key>.
-// Do not persist pasted text or uploads by default.
+function download(name,content,type){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('#filters').addEventListener('submit',e=>e.preventDefault());for(const id of ['query','days','scope','sort'])$('#'+id).addEventListener('input',render);
+$('#reset').addEventListener('click',()=>{$('#filters').reset();render();});
+$('#export-csv').addEventListener('click',()=>download('hotspotledger-view.csv',toCSV(visible,data),'text/csv;charset=utf-8'));
+$('#export-json').addEventListener('click',()=>download('hotspotledger-snapshot.json',JSON.stringify(data,null,2),'application/json'));
+$('#import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>5_000_000)throw Error('Choose a file smaller than 5 MB.');const candidate=importText(await file.text(),file.name,published);data=candidate;local=true;$('#filters').reset();$('#import-status').textContent=`Opened ${file.name} locally. Nothing was uploaded.`;render();}catch(error){$('#import-status').textContent='Could not open file: '+error.message;}e.target.value='';});
+$('#restore').addEventListener('click',()=>{data=published;local=false;$('#filters').reset();$('#import-status').textContent='Restored the published capture.';render();});
+try{const response=await fetch('./data/current.json');if(!response.ok)throw Error('Saved data could not be loaded.');published=validate(await response.json());data=published;render();const h=await fetch('./data/history.json');const history=await h.json();if(!history.length)$('#history-list').append(text('li','No successful captures yet.'));for(const entry of history.slice(-12).reverse()){if(!/^archive\/[A-Za-z0-9.-]+\.json$/.test(entry.file))continue;const li=document.createElement('li');li.append(sourceLink('./'+entry.file,`${entry.captured_at.slice(0,10)} · ${entry.count} species`));$('#history-list').append(li);}}catch(error){$('#status').textContent='The saved capture could not be loaded. Reload the page or use the source links below.';$('#result-count').textContent='Data unavailable';$('#empty').hidden=false;$('#empty-copy').textContent=error.message;}

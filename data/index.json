@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "tool": "hotspotledger",
+  "title": "Hotspot Ledger",
+  "status": "awaiting_source",
+  "captured_at": null,
+  "checked_at": null,
+  "record_count": 0,
+  "snapshot_count": 0,
+  "window_days": 30,
+  "coverage": "Two exact hotspots; latest report per species within the previous 30 days.",
+  "source_url": "https://documenter.getpostman.com/view/664302/S1ENwy59",
+  "current": "current.json",
+  "history": "history.json",
+  "errors": [
+    "First source capture awaits EBIRD_API_KEY in repository Actions."
+  ]
+}
