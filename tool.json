@@ -2,14 +2,14 @@
   "id": "hotspotledger",
   "title": "Hotspot Ledger",
   "description": "Compare recent bird reports from Iona Beach and Hartlen Point, with a clear view of shared species and notable sightings.",
-  "category": "nature",
+  "category": "places",
   "tags": [
     "birds",
     "eBird",
     "Canada",
     "hotspots"
   ],
-  "icon": "binoculars",
+  "icon": "map-pin",
   "url": "/hotspotledger/",
   "source": "https://github.com/jsdyer/hotspotledger",
   "hosting": "project",

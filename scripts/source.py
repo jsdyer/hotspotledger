@@ -148,10 +148,17 @@ def collect():
     for requested in SITES:
         rows,provenance=client.get('/ref/hotspot/'+requested['region'],{'fmt':'json'})
         site=resolve_site(rows,requested);sites.append(site);sources.append(provenance)
+        public_locations={r.get('locId'):r.get('locName','') for r in rows if isinstance(r,dict) and re.fullmatch(r'L\d+',str(r.get('locId','')))}
         recent,p=client.get('/data/obs/'+site['id']+'/recent',{'back':30,'cat':'species','maxResults':LIMIT,'includeProvisional':'false','sort':'date'})
         p.update(feed='recent',scope='exact hotspot',hotspot_id=site['id'])
         if any(row.get('locId')!=site['id'] for row in recent):
-            raise ValueError('Recent feed returned locations outside exact hotspot '+site['id']+'; source scope needs review')
+            counts={}
+            for row in recent:
+                loc=row.get('locId')
+                if loc in public_locations:counts[loc]=counts.get(loc,0)+1
+            details='; '.join(loc+' '+public_locations[loc]+' ('+str(count)+' rows)' for loc,count in sorted(counts.items())[:20])
+            unknown=sum(1 for row in recent if row.get('locId') not in public_locations)
+            raise ValueError('Recent feed scope mismatch. Requested '+site['id']+' '+site['name']+'. Public returned hotspots: '+(details or 'none')+'. Non-public or unknown location rows withheld: '+str(unknown))
         sources.append(p)
         notable,p=client.get('/data/obs/'+site['region']+'/recent/notable',{'back':30,'maxResults':LIMIT,'detail':'simple','hotspot':'true'})
         retained=select_notable(notable,site)
