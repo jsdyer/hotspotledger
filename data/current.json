@@ -1,10 +1,2328 @@
 {
   "schema": 1,
-  "collector_version": 1,
-  "status": "awaiting_source",
-  "captured_at": null,
+  "collector_version": 3,
+  "status": "ready",
+  "captured_at": "2026-11-22T15:17:58Z",
   "window_days": 30,
-  "records": [],
+  "records": [
+    {
+      "id": "ambduc",
+      "name": "American Black Duck",
+      "scientific_name": "Anas rubripes",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 10,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "y00475",
+      "name": "American Coot",
+      "scientific_name": "Fulica americana",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "amecro",
+      "name": "American Crow",
+      "scientific_name": "Corvus brachyrhynchos",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amgplo",
+      "name": "American Golden-Plover",
+      "scientific_name": "Pluvialis dominica",
+      "west": null,
+      "east": {
+        "date": "2026-10-27 07:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405807493",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "amegfi",
+      "name": "American Goldfinch",
+      "scientific_name": "Spinus tristis",
+      "west": {
+        "date": "2026-10-30 08:02",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S406614210",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amhgul1",
+      "name": "American Herring Gull",
+      "scientific_name": "Larus smithsonianus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amekes",
+      "name": "American Kestrel",
+      "scientific_name": "Falco sparverius",
+      "west": null,
+      "east": {
+        "date": "2026-11-02 06:45",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S407497660",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amepip",
+      "name": "American Pipit",
+      "scientific_name": "Anthus rubescens",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 11,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amerob",
+      "name": "American Robin",
+      "scientific_name": "Turdus migratorius",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amtspa",
+      "name": "American Tree Sparrow",
+      "scientific_name": "Spizelloides arborea",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "amewig",
+      "name": "American Wigeon",
+      "scientific_name": "Mareca americana",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-11 11:43",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S409818713",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "annhum",
+      "name": "Anna's Hummingbird",
+      "scientific_name": "Calypte anna",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "atlpuf",
+      "name": "Atlantic Puffin",
+      "scientific_name": "Fratercula arctica",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "baleag",
+      "name": "Bald Eagle",
+      "scientific_name": "Haliaeetus leucocephalus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "belkin1",
+      "name": "Belted Kingfisher",
+      "scientific_name": "Megaceryle alcyon",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "bewwre",
+      "name": "Bewick's Wren",
+      "scientific_name": "Thryomanes bewickii",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "blkgui",
+      "name": "Black Guillemot",
+      "scientific_name": "Cepphus grylle",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "blksco2",
+      "name": "Black Scoter",
+      "scientific_name": "Melanitta americana",
+      "west": null,
+      "east": {
+        "date": "2026-11-12 07:30",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S409957235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "bkbplo",
+      "name": "Black-bellied Plover",
+      "scientific_name": "Pluvialis squatarola",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "bkcchi",
+      "name": "Black-capped Chickadee",
+      "scientific_name": "Poecile atricapillus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "bklkit",
+      "name": "Black-legged Kittiwake",
+      "scientific_name": "Rissa tridactyla",
+      "west": null,
+      "east": {
+        "date": "2026-11-12 07:30",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S409957235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "btnwar",
+      "name": "Black-throated Green Warbler",
+      "scientific_name": "Setophaga virens",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "blujay",
+      "name": "Blue Jay",
+      "scientific_name": "Cyanocitta cristata",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "buhvir",
+      "name": "Blue-headed Vireo",
+      "scientific_name": "Vireo solitarius",
+      "west": null,
+      "east": {
+        "date": "2026-11-11 09:56",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409747675",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "bohwax",
+      "name": "Bohemian Waxwing",
+      "scientific_name": "Bombycilla garrulus",
+      "west": null,
+      "east": {
+        "date": "2026-11-05 09:54",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408161803",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "bongul",
+      "name": "Bonaparte's Gull",
+      "scientific_name": "Chroicocephalus philadelphia",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-15 08:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410817235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "brncre",
+      "name": "Brown Creeper",
+      "scientific_name": "Certhia americana",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "buffle",
+      "name": "Bufflehead",
+      "scientific_name": "Bucephala albeola",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 10,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-17 07:16",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411171961",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "calgul",
+      "name": "California Gull",
+      "scientific_name": "Larus californicus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 8,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "cangoo",
+      "name": "Canada Goose",
+      "scientific_name": "Branta canadensis",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 65,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "cedwax",
+      "name": "Cedar Waxwing",
+      "scientific_name": "Bombycilla cedrorum",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 11,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "comeid",
+      "name": "Common Eider",
+      "scientific_name": "Somateria mollissima",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "comgol",
+      "name": "Common Goldeneye",
+      "scientific_name": "Bucephala clangula",
+      "west": null,
+      "east": {
+        "date": "2026-11-03 07:31",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S407725242",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "comloo",
+      "name": "Common Loon",
+      "scientific_name": "Gavia immer",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "commer",
+      "name": "Common Merganser",
+      "scientific_name": "Mergus merganser",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-14 10:31",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410421206",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "commur",
+      "name": "Common Murre",
+      "scientific_name": "Uria aalge",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "comrav",
+      "name": "Common Raven",
+      "scientific_name": "Corvus corax",
+      "west": {
+        "date": "2026-10-30 08:02",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406614210",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "comyel",
+      "name": "Common Yellowthroat",
+      "scientific_name": "Geothlypis trichas",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "coohaw",
+      "name": "Cooper's Hawk",
+      "scientific_name": "Astur cooperii",
+      "west": {
+        "date": "2026-10-30 08:02",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406614210",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-17 07:16",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411171961",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "daejun",
+      "name": "Dark-eyed Junco",
+      "scientific_name": "Junco hyemalis",
+      "west": {
+        "date": "2026-11-13 11:37",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S410591896",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "dickci",
+      "name": "Dickcissel",
+      "scientific_name": "Spiza americana",
+      "west": null,
+      "east": {
+        "date": "2026-11-05 11:45",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408210465",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "doccor",
+      "name": "Double-crested Cormorant",
+      "scientific_name": "Nannopterum auritum",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 12,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "doveki",
+      "name": "Dovekie",
+      "scientific_name": "Alle alle",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 21,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "dowwoo",
+      "name": "Downy Woodpecker",
+      "scientific_name": "Dryobates pubescens",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "dunlin",
+      "name": "Dunlin",
+      "scientific_name": "Calidris alpina",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-05 07:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408143148",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "eucdov",
+      "name": "Eurasian Collared-Dove",
+      "scientific_name": "Streptopelia decaocto",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "eurwig",
+      "name": "Eurasian Wigeon",
+      "scientific_name": "Mareca penelope",
+      "west": {
+        "date": "2026-10-23 12:36",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S404809286",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "eursta",
+      "name": "European Starling",
+      "scientific_name": "Sturnus vulgaris",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 350,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "foxspa",
+      "name": "Fox Sparrow",
+      "scientific_name": "Passerella iliaca",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "gadwal",
+      "name": "Gadwall",
+      "scientific_name": "Mareca strepera",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "glwgul",
+      "name": "Glaucous-winged Gull",
+      "scientific_name": "Larus glaucescens",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": 10,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "gockin",
+      "name": "Golden-crowned Kinglet",
+      "scientific_name": "Regulus satrapa",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "gocspa",
+      "name": "Golden-crowned Sparrow",
+      "scientific_name": "Zonotrichia atricapilla",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "grycat",
+      "name": "Gray Catbird",
+      "scientific_name": "Dumetella carolinensis",
+      "west": null,
+      "east": {
+        "date": "2026-11-06 09:01",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408362627",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "gbbgul",
+      "name": "Great Black-backed Gull",
+      "scientific_name": "Larus marinus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "grbher3",
+      "name": "Great Blue Heron",
+      "scientific_name": "Ardea herodias",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 10,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-09 07:31",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409281835",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "grecor",
+      "name": "Great Cormorant",
+      "scientific_name": "Phalacrocorax carbo",
+      "west": null,
+      "east": {
+        "date": "2026-11-14 08:36",
+        "count": 7,
+        "checklist": "https://ebird.org/checklist/S410416753",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "greshe",
+      "name": "Great Shearwater",
+      "scientific_name": "Ardenna gravis",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "greyel",
+      "name": "Greater Yellowlegs",
+      "scientific_name": "Tringa melanoleuca",
+      "west": {
+        "date": "2026-11-07 09:26",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S409832129",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-11 11:43",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S409818713",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "gnwtea",
+      "name": "Green-winged Teal",
+      "scientific_name": "Anas crecca",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:45",
+        "count": 12,
+        "checklist": "https://ebird.org/checklist/S412286677",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "haiwoo",
+      "name": "Hairy Woodpecker",
+      "scientific_name": "Leuconotopicus villosus",
+      "west": null,
+      "east": {
+        "date": "2026-11-15 08:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410817235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "hoomer",
+      "name": "Hooded Merganser",
+      "scientific_name": "Lophodytes cucullatus",
+      "west": {
+        "date": "2026-10-24 10:18",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405103405",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "horgre",
+      "name": "Horned Grebe",
+      "scientific_name": "Podiceps auritus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "horlar",
+      "name": "Horned Lark",
+      "scientific_name": "Eremophila alpestris",
+      "west": null,
+      "east": {
+        "date": "2026-11-14 10:31",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410421206",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "houfin",
+      "name": "House Finch",
+      "scientific_name": "Haemorhous mexicanus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "y00478",
+      "name": "Iceland Gull",
+      "scientific_name": "Larus glaucoides",
+      "west": null,
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "killde",
+      "name": "Killdeer",
+      "scientific_name": "Charadrius vociferus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "laplon",
+      "name": "Lapland Longspur",
+      "scientific_name": "Calcarius lapponicus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "lcspet",
+      "name": "Leach's Storm-Petrel",
+      "scientific_name": "Hydrobates leucorhous",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "leasan",
+      "name": "Least Sandpiper",
+      "scientific_name": "Calidris minutilla",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "lessca",
+      "name": "Lesser Scaup",
+      "scientific_name": "Aythya affinis",
+      "west": {
+        "date": "2026-11-17 16:37",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411283612",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "linspa",
+      "name": "Lincoln's Sparrow",
+      "scientific_name": "Melospiza lincolnii",
+      "west": {
+        "date": "2026-10-28 17:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406199268",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "lobdow",
+      "name": "Long-billed Dowitcher",
+      "scientific_name": "Limnodromus scolopaceus",
+      "west": {
+        "date": "2026-11-17 16:37",
+        "count": 12,
+        "checklist": "https://ebird.org/checklist/S411283612",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "lotduc",
+      "name": "Long-tailed Duck",
+      "scientific_name": "Clangula hyemalis",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "mallar3",
+      "name": "Mallard",
+      "scientific_name": "Anas platyrhynchos",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "merlin",
+      "name": "Merlin",
+      "scientific_name": "Falco columbarius",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "moudov",
+      "name": "Mourning Dove",
+      "scientific_name": "Zenaida macroura",
+      "west": {
+        "date": "2026-10-29 14:12",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406422331",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "nstspa",
+      "name": "Nelson's Sparrow",
+      "scientific_name": "Ammospiza nelsoni",
+      "west": null,
+      "east": {
+        "date": "2026-11-09 07:31",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409281835",
+        "notable": false,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "norcar",
+      "name": "Northern Cardinal",
+      "scientific_name": "Cardinalis cardinalis",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "norfli",
+      "name": "Northern Flicker",
+      "scientific_name": "Colaptes auratus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "norgan",
+      "name": "Northern Gannet",
+      "scientific_name": "Morus bassanus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "norhar2",
+      "name": "Northern Harrier",
+      "scientific_name": "Circus hudsonius",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "norpin",
+      "name": "Northern Pintail",
+      "scientific_name": "Anas acuta",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "norsho",
+      "name": "Northern Shoveler",
+      "scientific_name": "Spatula clypeata",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "norshr4",
+      "name": "Northern Shrike",
+      "scientific_name": "Lanius borealis",
+      "west": {
+        "date": "2026-11-13 11:37",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410251812",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "orcwar",
+      "name": "Orange-crowned Warbler",
+      "scientific_name": "Leiothlypis celata",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "pacwre1",
+      "name": "Pacific Wren",
+      "scientific_name": "Nannus pacificus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "parjae",
+      "name": "Parasitic Jaeger",
+      "scientific_name": "Stercorarius parasiticus",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "pecsan",
+      "name": "Pectoral Sandpiper",
+      "scientific_name": "Calidris melanotos",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "pelcor",
+      "name": "Pelagic Cormorant",
+      "scientific_name": "Urile pelagicus",
+      "west": {
+        "date": "2026-11-16 14:33",
+        "count": 25,
+        "checklist": "https://ebird.org/checklist/S411068784",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "perfal",
+      "name": "Peregrine Falcon",
+      "scientific_name": "Falco peregrinus",
+      "west": {
+        "date": "2026-10-28 17:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406199268",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "pibgre",
+      "name": "Pied-billed Grebe",
+      "scientific_name": "Podilymbus podiceps",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "pinsis",
+      "name": "Pine Siskin",
+      "scientific_name": "Spinus pinus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 20,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "pinwar",
+      "name": "Pine Warbler",
+      "scientific_name": "Setophaga pinus",
+      "west": null,
+      "east": {
+        "date": "2026-11-11 09:56",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409747675",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "pifgoo",
+      "name": "Pink-footed Goose",
+      "scientific_name": "Anser brachyrhynchus",
+      "west": null,
+      "east": {
+        "date": "2026-10-24 14:25",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405098960",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "pomjae",
+      "name": "Pomarine Jaeger",
+      "scientific_name": "Stercorarius pomarinus",
+      "west": null,
+      "east": {
+        "date": "2026-11-08 07:34",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S408990719",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "prawar",
+      "name": "Prairie Warbler",
+      "scientific_name": "Setophaga discolor",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "purfin",
+      "name": "Purple Finch",
+      "scientific_name": "Haemorhous purpureus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 8,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "razorb",
+      "name": "Razorbill",
+      "scientific_name": "Alca torda",
+      "west": null,
+      "east": {
+        "date": "2026-11-14 08:36",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410416753",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "redcro",
+      "name": "Red Crossbill",
+      "scientific_name": "Loxia curvirostra",
+      "west": null,
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rebmer",
+      "name": "Red-breasted Merganser",
+      "scientific_name": "Mergus serrator",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rebnut",
+      "name": "Red-breasted Nuthatch",
+      "scientific_name": "Sitta canadensis",
+      "west": {
+        "date": "2026-11-08 15:40",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409187967",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rengre",
+      "name": "Red-necked Grebe",
+      "scientific_name": "Podiceps grisegena",
+      "west": {
+        "date": "2026-11-08 15:40",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409187967",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-05 11:45",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S408210465",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rethaw",
+      "name": "Red-tailed Hawk",
+      "scientific_name": "Buteo jamaicensis",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "retloo",
+      "name": "Red-throated Loon",
+      "scientific_name": "Gavia stellata",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:45",
+        "count": 11,
+        "checklist": "https://ebird.org/checklist/S412286677",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rewbla",
+      "name": "Red-winged Blackbird",
+      "scientific_name": "Agelaius phoeniceus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "ribgul",
+      "name": "Ring-billed Gull",
+      "scientific_name": "Larus delawarensis",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:45",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412286677",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rinduc",
+      "name": "Ring-necked Duck",
+      "scientific_name": "Aythya collaris",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "rinphe1",
+      "name": "Ring-necked Pheasant",
+      "scientific_name": "Phasianus colchicus",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rocpig",
+      "name": "Rock Pigeon",
+      "scientific_name": "Columba livia",
+      "west": null,
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 7,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "robgro",
+      "name": "Rose-breasted Grosbeak",
+      "scientific_name": "Pheucticus ludovicianus",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "rolhaw",
+      "name": "Rough-legged Hawk",
+      "scientific_name": "Buteo lagopus",
+      "west": null,
+      "east": {
+        "date": "2026-11-12 07:30",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409957235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "ruckin",
+      "name": "Ruby-crowned Kinglet",
+      "scientific_name": "Corthylio calendula",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "rudduc",
+      "name": "Ruddy Duck",
+      "scientific_name": "Oxyura jamaicensis",
+      "west": {
+        "date": "2026-11-13 11:37",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410251812",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "rudtur",
+      "name": "Ruddy Turnstone",
+      "scientific_name": "Arenaria interpres",
+      "west": null,
+      "east": {
+        "date": "2026-10-25 07:25",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405288930",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "rufgro",
+      "name": "Ruffed Grouse",
+      "scientific_name": "Bonasa umbellus",
+      "west": null,
+      "east": {
+        "date": "2026-11-11 10:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409942338",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "sander",
+      "name": "Sanderling",
+      "scientific_name": "Calidris alba",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 20,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-10-24 07:35",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S404980256",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "savspa",
+      "name": "Savannah Sparrow",
+      "scientific_name": "Passerculus sandwichensis",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "semplo",
+      "name": "Semipalmated Plover",
+      "scientific_name": "Charadrius semipalmatus",
+      "west": null,
+      "east": {
+        "date": "2026-10-26 09:33",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405599791",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "semsan",
+      "name": "Semipalmated Sandpiper",
+      "scientific_name": "Calidris pusilla",
+      "west": null,
+      "east": {
+        "date": "2026-10-25 08:28",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405326360",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "shshaw",
+      "name": "Sharp-shinned Hawk",
+      "scientific_name": "Accipiter striatus",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "mewgul2",
+      "name": "Short-billed Gull",
+      "scientific_name": "Larus brachyrhynchus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "snobun",
+      "name": "Snow Bunting",
+      "scientific_name": "Plectrophenax nivalis",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412219141",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "snogoo",
+      "name": "Snow Goose",
+      "scientific_name": "Anser caerulescens",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 150,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "sonspa",
+      "name": "Song Sparrow",
+      "scientific_name": "Melospiza melodia",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 5,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 7,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "sposan",
+      "name": "Spotted Sandpiper",
+      "scientific_name": "Actitis macularius",
+      "west": null,
+      "east": {
+        "date": "2026-10-27 07:47",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405901161",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "spotow",
+      "name": "Spotted Towhee",
+      "scientific_name": "Pipilo maculatus",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "sursco",
+      "name": "Surf Scoter",
+      "scientific_name": "Melanitta perspicillata",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 15,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-21 07:33",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412036765",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "swaspa",
+      "name": "Swamp Sparrow",
+      "scientific_name": "Melospiza georgiana",
+      "west": null,
+      "east": {
+        "date": "2026-11-21 07:22",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412198045",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "truswa",
+      "name": "Trumpeter Swan",
+      "scientific_name": "Cygnus buccinator",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 17,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "tunswa",
+      "name": "Tundra Swan",
+      "scientific_name": "Cygnus columbianus",
+      "west": {
+        "date": "2026-10-25 08:13",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405399633",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "turvul",
+      "name": "Turkey Vulture",
+      "scientific_name": "Cathartes aura",
+      "west": null,
+      "east": {
+        "date": "2026-11-09 07:31",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S409281835",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "virrai",
+      "name": "Virginia Rail",
+      "scientific_name": "Rallus limicola",
+      "west": {
+        "date": "2026-11-17 16:37",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S411283612",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "wesgre",
+      "name": "Western Grebe",
+      "scientific_name": "Aechmophorus occidentalis",
+      "west": {
+        "date": "2026-10-30 08:02",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S406614210",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "marwre1",
+      "name": "Western Marsh Wren",
+      "scientific_name": "Cistothorus paludicola",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "wesmea",
+      "name": "Western Meadowlark",
+      "scientific_name": "Sturnella neglecta",
+      "west": {
+        "date": "2026-11-21 09:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S412168204",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "wessan",
+      "name": "Western Sandpiper",
+      "scientific_name": "Calidris mauri",
+      "west": {
+        "date": "2026-11-20 16:21",
+        "count": null,
+        "checklist": "https://ebird.org/checklist/S411898337",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "whcspa",
+      "name": "White-crowned Sparrow",
+      "scientific_name": "Zonotrichia leucophrys",
+      "west": {
+        "date": "2026-11-17 16:37",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S411283612",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-10-25 08:28",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405326360",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "whrsan",
+      "name": "White-rumped Sandpiper",
+      "scientific_name": "Calidris fuscicollis",
+      "west": null,
+      "east": {
+        "date": "2026-11-17 07:16",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411171961",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "whtspa",
+      "name": "White-throated Sparrow",
+      "scientific_name": "Zonotrichia albicollis",
+      "west": null,
+      "east": {
+        "date": "2026-11-15 08:32",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S410817235",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "whwcro",
+      "name": "White-winged Crossbill",
+      "scientific_name": "Loxia leucoptera",
+      "west": null,
+      "east": {
+        "date": "2026-10-25 07:36",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S405274538",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "whwsco2",
+      "name": "White-winged Scoter",
+      "scientific_name": "Melanitta deglandi",
+      "west": {
+        "date": "2026-11-15 08:21",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S410807160",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": {
+        "date": "2026-11-22 07:42",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S412351755",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    },
+    {
+      "id": "wilsni1",
+      "name": "Wilson's Snipe",
+      "scientific_name": "Gallinago delicata",
+      "west": null,
+      "east": {
+        "date": "2026-11-20 07:23",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S411787433",
+        "notable": true,
+        "reviewed": true,
+        "valid": true
+      }
+    },
+    {
+      "id": "wooduc",
+      "name": "Wood Duck",
+      "scientific_name": "Aix sponsa",
+      "west": {
+        "date": "2026-11-01 10:29",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S407355760",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      },
+      "east": null
+    },
+    {
+      "id": "yerwar",
+      "name": "Yellow-rumped Warbler",
+      "scientific_name": "Setophaga coronata",
+      "west": null,
+      "east": {
+        "date": "2026-11-22 09:43",
+        "count": 2,
+        "checklist": "https://ebird.org/checklist/S412372363",
+        "notable": false,
+        "reviewed": false,
+        "valid": true
+      }
+    }
+  ],
   "sites": [
     {
       "key": "west",
@@ -12,9 +2330,9 @@
       "region": "CA-BC",
       "province": "British Columbia",
       "coast": "Pacific",
-      "id": null,
-      "name": "Exact eBird hotspot pending first collection",
-      "url": "https://ebird.org/hotspots"
+      "id": "L386761",
+      "name": "Iona Island beach",
+      "url": "https://ebird.org/hotspot/L386761"
     },
     {
       "key": "east",
@@ -22,21 +2340,73 @@
       "region": "CA-NS",
       "province": "Nova Scotia",
       "coast": "Atlantic",
-      "id": null,
-      "name": "Exact eBird hotspot pending first collection",
-      "url": "https://ebird.org/hotspots"
+      "id": "L151222",
+      "name": "Hartlen Point",
+      "url": "https://ebird.org/hotspot/L151222"
     }
   ],
   "sources": [
     {
-      "url": "https://documenter.getpostman.com/view/664302/S1ENwy59",
-      "retrieved_at": null
+      "url": "https://api.ebird.org/v2/ref/hotspot/CA-BC?fmt=json",
+      "retrieved_at": "2026-11-22T15:17:53Z",
+      "response_sha256": "c600a660094723ab977ec105edc17520a3d92e6d3225efc40de90564322a5a55",
+      "rows": 6773
+    },
+    {
+      "url": "https://api.ebird.org/v2/data/obs/L386761/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
+      "retrieved_at": "2026-11-22T15:17:53Z",
+      "response_sha256": "e5210182da2581d563f5256f6ad82eee12af4bbad62d4c3e2decd8f6e7b81e24",
+      "rows": 82,
+      "feed": "recent",
+      "scope": "exact hotspot",
+      "hotspot_id": "L386761"
+    },
+    {
+      "url": "https://api.ebird.org/v2/data/obs/CA-BC/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
+      "retrieved_at": "2026-11-22T15:17:55Z",
+      "response_sha256": "c1882e82a5bd3d0e356022dd0a69ed0fd8641bb3562d41fb76cd3b46a3bbd6c0",
+      "rows": 2150,
+      "feed": "notable",
+      "scope": "province filtered to exact hotspot",
+      "region": "CA-BC",
+      "hotspot_id": "L386761",
+      "retained_rows": 0,
+      "excluded_other_locations": 2150
+    },
+    {
+      "url": "https://api.ebird.org/v2/ref/hotspot/CA-NS?fmt=json",
+      "retrieved_at": "2026-11-22T15:17:56Z",
+      "response_sha256": "5fe5d79db10ddf762ac20836438ca36aed382dce5885fb16d506b89a5971660b",
+      "rows": 1696
+    },
+    {
+      "url": "https://api.ebird.org/v2/data/obs/L151222/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
+      "retrieved_at": "2026-11-22T15:17:57Z",
+      "response_sha256": "a0cf4a4bc2dbc9433ffb6ad9f6922636a724c740091f7158060519bfd77601f4",
+      "rows": 104,
+      "feed": "recent",
+      "scope": "exact hotspot",
+      "hotspot_id": "L151222"
+    },
+    {
+      "url": "https://api.ebird.org/v2/data/obs/CA-NS/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
+      "retrieved_at": "2026-11-22T15:17:58Z",
+      "response_sha256": "0d4acf902647213ea72318eab683f6a03e1e279625952d99b8c2a67446e67768",
+      "rows": 766,
+      "feed": "notable",
+      "scope": "province filtered to exact hotspot",
+      "region": "CA-NS",
+      "hotspot_id": "L151222",
+      "retained_rows": 22,
+      "excluded_other_locations": 744
     }
   ],
   "attribution": "Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.",
   "terms_url": "https://www.birds.cornell.edu/home/ebird-data-access-terms-of-use/",
-  "coverage": "Two exact hotspots; latest report per species within the previous 30 days.",
+  "coverage": "Only the latest accepted report per species at each exact hotspot within the previous 30 days. Notable means the species also occurs in the separate provincial eBird notable feed after exact hotspot filtering in that window.",
   "warnings": [
-    "No eBird source capture is saved yet. The first scheduled collection requires the repository EBIRD_API_KEY secret. No demonstration observations are displayed."
+    "Reporting effort differs. Missing means not returned in this source window, not absent. These are not seasonal or historical species totals.",
+    "A notable label is an eBird feed flag from a provincial feed filtered to this exact hotspot, not a local rarity assessment. Provincial feed coverage can omit other notable reports. It can refer to a different checklist for the same species in the window.",
+    "Observation times are the source’s local checklist time; collection times are UTC. Sensitive or restricted records may be excluded by eBird."
   ]
 }

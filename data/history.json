@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "captured_at": "2026-11-22T15:17:58Z",
+    "file": "archive/20261122T151758Z-4b9a5f8f4b4b.json",
+    "sha256": "4b9a5f8f4b4bb2dc8d9d18a9a830d65e5eb6cfeb350baf040e7059f8825362f2",
+    "count": 145,
+    "window_days": 30
+  }
+]
