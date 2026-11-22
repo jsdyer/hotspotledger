@@ -22,7 +22,8 @@ def synthetic_snapshot():
         'warnings':['Synthetic test data, used only by CI.'],
         'records':[
             {'id':'testone','name':'Test Shared Bird','scientific_name':'Testus communis','west':{'date':'2026-02-27','count':2,'notable':False,'checklist':'https://ebird.org/checklist/S1'},'east':{'date':'2026-02-26','count':None,'notable':True,'checklist':'https://ebird.org/checklist/S2'}},
-            {'id':'testtwo','name':'<img src=x onerror=alert(1)>','scientific_name':'Testus localis','west':{'date':'2026-02-20','count':1,'notable':False,'checklist':'https://ebird.org/checklist/S3'},'east':None},
+            # A rolling-window boundary report must survive the full-source view.
+            {'id':'testtwo','name':'<img src=x onerror=alert(1)>','scientific_name':'Testus localis','west':{'date':'2026-01-29 12:36','count':1,'notable':False,'checklist':'https://ebird.org/checklist/S3'},'east':None},
         ],
     }
 

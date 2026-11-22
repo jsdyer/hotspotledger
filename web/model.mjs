@@ -17,6 +17,9 @@ export function validate(data){
   return data;
 }
 export function windowRows(data,days=30){
+  // eBird already applies the full rolling window. Local checklist dates cannot
+  // safely reconstruct its UTC cutoff, so retain every report in that view.
+  if(days >= (data.window_days || 30))return data.records.slice();
   const anchor=Date.parse((data.captured_at||new Date().toISOString()).slice(0,10)+'T23:59:59Z');
   return data.records.map(r=>({...r,...Object.fromEntries(['west','east'].map(side=>{const o=r[side];return [side,o&&anchor-Date.parse(o.date.slice(0,10)+'T00:00:00Z')<days*86400000?o:null];}))})).filter(r=>r.west||r.east);
 }
