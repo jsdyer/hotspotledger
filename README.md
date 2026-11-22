@@ -48,7 +48,7 @@ python3 scripts/build.py
 python3 -m http.server 8000 --directory dist
 ```
 
-CI installs Playwright solely for acceptance tests at the project subpath, covering JSON/CSV import, filters, safe rendering, downloads, restore, and mobile layout. Browser fixtures are explicitly synthetic test inputs; they are not part of the published dataset. Build code is Python standard library; the app uses no runtime dependencies. Keep all assets relative. Do not commit `dist/` or set a CNAME.
+CI installs Playwright solely for acceptance tests at the project subpath, covering JSON/CSV import, filters, safe rendering, downloads, restore, and mobile layout. Browser fixtures are explicitly synthetic test inputs; they are not part of the published dataset. Build code is Python standard library; the app uses no runtime dependencies. Builds use content-hashed filenames for the app, its model dependency, and the stylesheet, so refreshed HTML loads matching asset versions even when a browser has cached the previous release. All asset references remain relative to the project path. Do not commit `dist/` or set a CNAME.
 
 ### Notable feed scope
 

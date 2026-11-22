@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build a browser tool using Python's standard library; no network required."""
 from html import escape
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -10,6 +11,29 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+
+
+def fingerprint_assets(stage, page):
+    """Give each asset graph a stable URL that changes with its contents."""
+    def rename(name):
+        path = stage / name
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+        versioned = f"{path.stem}.{digest}{path.suffix}"
+        path.rename(stage / versioned)
+        return versioned
+
+    model_name = rename("model.mjs")
+    app_path = stage / "app.mjs"
+    app = app_path.read_text(encoding="utf-8")
+    if "./model.mjs" not in app:
+        raise ValueError("Missing local model import in web/app.mjs")
+    app_path.write_text(app.replace("./model.mjs", f"./{model_name}"), encoding="utf-8")
+    for name in ("app.mjs", "style.css"):
+        reference = f"./{name}"
+        if reference not in page:
+            raise ValueError(f"Missing local asset reference: {reference}")
+        page = page.replace(reference, f"./{rename(name)}")
+    return page
 
 
 def metadata(root=ROOT):
@@ -77,6 +101,7 @@ def build(root=ROOT):
             page = page.replace(placeholder, markup if on_coolcode else "")
         if re.search(r"\{\{[A-Z_]+\}\}", page):
             raise ValueError("Unresolved template placeholder in web/index.html")
+        page = fingerprint_assets(stage, page)
         index.write_text(page, encoding="utf-8")
         (stage / ".nojekyll").touch()
         if output.exists():

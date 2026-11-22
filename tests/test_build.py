@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import re
 import shutil
 import sys
 import tempfile
@@ -31,9 +32,38 @@ class BuildTests(unittest.TestCase):
         self.assertIn('&lt;img', page)
         self.assertNotIn('<img', page)
         self.assertNotIn('{{', page)
-        self.assertIn('href="./style.css"', page)
+        self.assertRegex(page, r'href="\./style\.[a-f0-9]{16}\.css"')
         self.assertFalse((self.root / "dist/private.txt").exists())
         self.assertTrue((self.root / "dist/.nojekyll").exists())
+
+    def test_asset_urls_change_with_dependencies_and_resolve_at_the_project_path(self):
+        def assets():
+            build(self.root)
+            output = self.root / "dist"
+            page = (output / "index.html").read_text()
+            app = re.search(r'src="\./(app\.[a-f0-9]{16}\.mjs)"', page).group(1)
+            style = re.search(r'href="\./(style\.[a-f0-9]{16}\.css)"', page).group(1)
+            model = re.search(r"\./(model\.[a-f0-9]{16}\.mjs)", (output / app).read_text()).group(1)
+            for name in (app, style, model):
+                self.assertTrue((output / name).is_file())
+            self.assertNotIn('./app.mjs', page)
+            self.assertNotIn('./model.mjs', (output / app).read_text())
+            self.assertFalse((output / 'model.mjs').exists())
+            return app, model, style
+
+        before = assets()
+        self.assertEqual(before, assets(), 'Unchanged source must build identical asset URLs')
+        model_path = self.root / 'web/model.mjs'
+        model_path.write_text(model_path.read_text() + '\n// New model version for the cache regression test.\n')
+        after = assets()
+        self.assertNotEqual(before[0], after[0], 'The app URL must change when its model dependency changes')
+        self.assertNotEqual(before[1], after[1])
+        self.assertEqual(before[2], after[2])
+        style_path = self.root / 'web/style.css'
+        style_path.write_text(style_path.read_text() + '\n/* New stylesheet version for the cache regression test. */\n')
+        styled = assets()
+        self.assertEqual(after[:2], styled[:2])
+        self.assertNotEqual(after[2], styled[2])
 
     def test_reporting_is_scoped_to_initialized_coolcode_tools(self):
         for owner, slug, enabled in [

@@ -9,6 +9,13 @@ import threading
 ROOT=Path(__file__).resolve().parents[1]
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self,*args): pass
+    def end_headers(self):
+        # Reproduce the legacy module cache lifetime; all primer assets are temporary.
+        if self.path.split('?')[0] in ('/hotspotledger/app.mjs','/hotspotledger/model.mjs'):
+            self.send_header('Cache-Control','public, max-age=600, immutable')
+        else:
+            self.send_header('Cache-Control','no-store')
+        super().end_headers()
 
 def synthetic_snapshot():
     """Independent test data: never inherits source-capture metadata or scope."""
@@ -33,15 +40,34 @@ def main():
     screenshots=ROOT/'browser-checks';screenshots.mkdir(exist_ok=True)
     sample=synthetic_snapshot()
     with tempfile.TemporaryDirectory() as temp:
-        shutil.copytree(ROOT/'dist',Path(temp)/'hotspotledger');server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=temp));threading.Thread(target=server.serve_forever,daemon=True).start()
+        site=Path(temp)/'hotspotledger';shutil.copytree(ROOT/'dist',site)
+        # Cache a deliberately obsolete module graph at the former unversioned URLs.
+        # This primer and its sentinel modules are never placed in dist/ or published.
+        (site/'cache-primer.html').write_text('<!doctype html><html><head><title>CI cache primer</title></head><body><script type="module" src="./app.mjs"></script></body></html>')
+        (site/'model.mjs').write_text('globalThis.__hotspotLegacyModel = true; export const legacy = true;')
+        (site/'app.mjs').write_text("import './model.mjs'; globalThis.__hotspotLegacyApp = true;")
+        server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=temp));threading.Thread(target=server.serve_forever,daemon=True).start()
         try:
             with sync_playwright() as p:
                 browser=p.chromium.launch();page=browser.new_page(viewport={'width':1280,'height':1000});errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(f'http://127.0.0.1:{server.server_port}/hotspotledger/');page.wait_for_function("!document.querySelector('#status').textContent.includes('Loading')")
+                base=f'http://127.0.0.1:{server.server_port}/hotspotledger/'
+                page.goto(base+'cache-primer.html')
+                page.wait_for_function('globalThis.__hotspotLegacyApp === true && globalThis.__hotspotLegacyModel === true')
+                # The server now has fresh unversioned sources, while this same browser
+                # context still holds the cacheable legacy responses from the primer.
+                shutil.copyfile(ROOT/'web/app.mjs',site/'app.mjs')
+                shutil.copyfile(ROOT/'web/model.mjs',site/'model.mjs')
+                cached=page.evaluate("Promise.all(['app.mjs','model.mjs'].map(async file => (await (await fetch('./'+file,{cache:'force-cache'})).text()).includes('__hotspotLegacy')))")
+                assert cached==[True,True], 'Legacy app and model responses were not primed in the browser cache'
+                page.goto(base)
+                expect(page.locator('#status')).not_to_contain_text('Loading')
+                assert page.evaluate('globalThis.__hotspotLegacyApp === undefined && globalThis.__hotspotLegacyModel === undefined'), 'The built page reused a legacy unversioned module'
+                assert not errors,errors
                 page.locator('#import-file').set_input_files({'name':'synthetic-test-only.json','mimeType':'application/json','buffer':json.dumps(sample).encode()})
                 expect(page.locator('#import-status')).to_contain_text('Opened synthetic-test-only.json')
                 expect(page.locator('#status')).to_contain_text('LOCAL FILE')
                 assert page.locator('#rows tr').count()==2
+                expect(page.locator('#rows')).to_contain_text('2026-01-29 12:36')
                 assert page.locator('#shared-total').inner_text()=='1'
                 assert page.locator('#rows img').count()==0
                 page.locator('#scope').select_option('notable');assert page.locator('#rows tr').count()==1
@@ -62,6 +88,6 @@ def main():
                 page.screenshot(path=str(screenshots/'mobile.png'),full_page=True)
                 page.locator('#restore').click();assert 'LOCAL FILE' not in page.locator('#status').inner_text();assert page.locator('#restore').is_hidden()
                 assert not errors,errors;browser.close()
-            print('Browser acceptance passed: published data, local JSON/CSV roundtrip, filters, export, invalid import, safe text and mobile.')
+            print('Browser acceptance passed: same-context legacy module cache, full-source boundary report, published data, local JSON/CSV roundtrip, filters, export, invalid import, safe text and mobile.')
         finally:server.shutdown()
 if __name__=='__main__':main()
