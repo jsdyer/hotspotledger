@@ -14,11 +14,19 @@ class SourceTests(unittest.TestCase):
         self.sites=[{'id':'L123','key':'west'},{'id':'L456','key':'east'}]
         self.row={'speciesCode':'mallar3','comName':'Mallard','sciName':'Anas platyrhynchos','locId':'L123','obsDt':'2026-02-27 10:30','subId':'S123','howMany':3,'obsValid':True,'obsReviewed':True,'userDisplayName':'DO NOT STORE'}
     def test_exact_hotspot_and_geographic_bounds(self):
-        rows=[{'locId':'L123','locName':'Iona Island (General)','lat':49.22,'lng':-123.21}]
+        rows=[{'locId':'L123','locName':'Iona Island beach','lat':49.22,'lng':-123.21}]
         self.assertEqual(resolve_site(rows,SITES[0])['id'],'L123')
         with self.assertRaisesRegex(ValueError,'Resolve'):resolve_site(rows*2,SITES[0])
         rows[0]['lat']=50
         with self.assertRaisesRegex(ValueError,'Resolve'):resolve_site(rows,SITES[0])
+    def test_iona_beach_leaf_is_selected_instead_of_parent_group(self):
+        rows=[{'locId':'L261851','locName':'Iona Island (General)','lat':49.22,'lng':-123.21},
+              {'locId':'L386761','locName':'Iona Island beach','lat':49.22,'lng':-123.21},
+              {'locId':'L1149118','locName':'Iona Island--North Jetty','lat':49.22,'lng':-123.21}]
+        self.assertEqual(resolve_site(rows,SITES[0])['id'],'L386761')
+        with self.assertRaisesRegex(ValueError,'Resolve'):
+            resolve_site([rows[0],rows[2]],SITES[0])
+
     def test_derive_is_latest_by_species_not_total_and_does_not_retain_people(self):
         older=dict(self.row,obsDt='2026-02-20',howMany=100)
         east=dict(self.row,locId='L456',howMany=4)
