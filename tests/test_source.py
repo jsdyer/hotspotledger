@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from source import SITES,resolve_site,derive,validate,save,collect,Client
+from source import SITES,resolve_site,derive,validate,save,collect,Client,select_notable
 
 class SourceTests(unittest.TestCase):
     def setUp(self):
@@ -28,6 +28,15 @@ class SourceTests(unittest.TestCase):
         self.assertNotIn('DO NOT STORE',json.dumps(records))
     def test_foreign_hotspot_rejected(self):
         with self.assertRaisesRegex(ValueError,'outside'):derive({'west':([dict(self.row,locId='L999')],[])},self.sites)
+    def test_regional_notable_feed_is_filtered_to_exact_hotspot(self):
+        unrelated=dict(self.row,locId='L999',speciesCode='norcar')
+        retained=select_notable([self.row,unrelated],self.sites[0])
+        self.assertEqual(retained,[self.row])
+        records=derive({'west':([self.row],[dict(self.row,locId='L999')]),'east':([],[])},self.sites)
+        self.assertFalse(records[0]['west']['notable'])
+        with self.assertRaisesRegex(ValueError,'location identity'):
+            select_notable([dict(self.row,locId=None)],self.sites[0])
+
     def test_missing_key_does_not_write_or_guess_records(self):
         with patch.dict('os.environ',{},clear=True),self.assertRaisesRegex(RuntimeError,'EBIRD_API_KEY'):collect()
     def test_snapshot_is_immutable_and_index_is_small(self):

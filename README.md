@@ -49,3 +49,7 @@ python3 -m http.server 8000 --directory dist
 ```
 
 CI installs Playwright solely for acceptance tests at the project subpath, covering JSON/CSV import, filters, safe rendering, downloads, restore, and mobile layout. Browser fixtures are explicitly synthetic test inputs; they are not part of the published dataset. Build code is Python standard library; the app uses no runtime dependencies. Keep all assets relative. Do not commit `dist/` or set a CNAME.
+
+### Notable feed scope
+
+The recent-species feed is requested for the exact hotspot and mismatched locations fail validation. The notable feed is requested for its province (`CA-BC` or `CA-NS`, hotspot-only, at most 10,000 rows) and explicitly filtered by exact `locId`. Source provenance records received, retained and excluded-other-location counts. A nearby or provincial notable report never labels a species notable at Iona or Hartlen. The regional feed can omit other notable reports, so an unflagged species is not a claim of ordinary status.

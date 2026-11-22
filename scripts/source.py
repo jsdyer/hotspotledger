@@ -75,12 +75,24 @@ def observation(row, site):
     if count is not None and (type(count) is not int or count<0): raise ValueError('Invalid bird count')
     return species, {'date':date,'count':count,'checklist':'https://ebird.org/checklist/'+sub,'notable':False,'reviewed':bool(row.get('obsReviewed')),'valid':bool(row.get('obsValid'))}
 
+def select_notable(rows, site):
+    """A regional notable feed must be explicitly scoped to the exact hotspot."""
+    if not isinstance(rows,list): raise ValueError('Invalid regional notable feed')
+    retained=[]
+    for row in rows:
+        if not isinstance(row,dict) or not re.fullmatch(r'L\d+',str(row.get('locId',''))):
+            raise ValueError('Regional notable observation has no valid location identity')
+        if row['locId']==site['id']:
+            observation(row,site)
+            retained.append(row)
+    return retained
+
 def derive(feeds,sites):
     """One derived row per taxon, one latest observation per coast, no observer details."""
     grouped={}
     for site in sites:
         recent,notable=feeds[site['key']]
-        notable_codes={observation(r,site)[0] for r in notable}
+        notable_codes={observation(r,site)[0] for r in select_notable(notable,site)}
         for row in recent:
             species,obs=observation(row,site)
             if not row.get('comName') or not row.get('sciName'): raise ValueError('Missing species names')
@@ -137,8 +149,13 @@ def collect():
         rows,provenance=client.get('/ref/hotspot/'+requested['region'],{'fmt':'json'})
         site=resolve_site(rows,requested);sites.append(site);sources.append(provenance)
         recent,p=client.get('/data/obs/'+site['id']+'/recent',{'back':30,'cat':'species','maxResults':LIMIT,'includeProvisional':'false','sort':'date'})
+        p.update(feed='recent',scope='exact hotspot',hotspot_id=site['id'])
+        if any(row.get('locId')!=site['id'] for row in recent):
+            raise ValueError('Recent feed returned locations outside exact hotspot '+site['id']+'; source scope needs review')
         sources.append(p)
-        notable,p=client.get('/data/obs/'+site['id']+'/recent/notable',{'back':30,'maxResults':LIMIT,'detail':'simple'})
-        sources.append(p); feeds[site['key']]=(recent,notable)
-    payload={'schema':1,'collector_version':1,'status':'ready','captured_at':now(),'window_days':30,'records':derive(feeds,sites),'sites':sites,'sources':sources,'attribution':'Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.','terms_url':TERMS,'coverage':'Only the latest accepted report per species at each exact hotspot within the previous 30 days. Notable means the species also occurs in the separate eBird notable feed for that hotspot/window.','warnings':['Reporting effort differs. Missing means not returned in this source window, not absent. These are not seasonal or historical species totals.','A notable label is an eBird feed flag, not a local rarity assessment. It can refer to a different checklist for the same species in the window.','Observation times are the source’s local checklist time; collection times are UTC. Sensitive or restricted records may be excluded by eBird.']}
+        notable,p=client.get('/data/obs/'+site['region']+'/recent/notable',{'back':30,'maxResults':LIMIT,'detail':'simple','hotspot':'true'})
+        retained=select_notable(notable,site)
+        p.update(feed='notable',scope='province filtered to exact hotspot',region=site['region'],hotspot_id=site['id'],retained_rows=len(retained),excluded_other_locations=len(notable)-len(retained))
+        sources.append(p); feeds[site['key']]=(recent,retained)
+    payload={'schema':1,'collector_version':2,'status':'ready','captured_at':now(),'window_days':30,'records':derive(feeds,sites),'sites':sites,'sources':sources,'attribution':'Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.','terms_url':TERMS,'coverage':'Only the latest accepted report per species at each exact hotspot within the previous 30 days. Notable means the species also occurs in the separate provincial eBird notable feed after exact hotspot filtering in that window.','warnings':['Reporting effort differs. Missing means not returned in this source window, not absent. These are not seasonal or historical species totals.','A notable label is an eBird feed flag from a provincial feed filtered to this exact hotspot, not a local rarity assessment. Provincial feed coverage can omit other notable reports. It can refer to a different checklist for the same species in the window.','Observation times are the source’s local checklist time; collection times are UTC. Sensitive or restricted records may be excluded by eBird.']}
     save(payload)
