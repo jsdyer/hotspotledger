@@ -16,6 +16,7 @@
   "access": "browser",
   "data_info": {
     "mode": "snapshot",
-    "detail": "A daily derived eBird API comparison of the latest reports at Iona Beach and Hartlen Point within 30 days; not historical totals."
+    "detail": "A daily derived eBird API comparison of the latest reports at Iona Beach and Hartlen Point within 30 days; not historical totals.",
+    "cadence": "Daily"
   }
 }
