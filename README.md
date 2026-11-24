@@ -55,3 +55,11 @@ CI installs Playwright solely for acceptance tests at the project subpath, cover
 The recent-species feed is requested for the exact hotspot and mismatched locations fail validation. The notable feed is requested for its province (`CA-BC` or `CA-NS`, hotspot-only, at most 10,000 rows) and explicitly filtered by exact `locId`. Source provenance records received, retained and excluded-other-location counts. A nearby or provincial notable report never labels a species notable at Iona or Hartlen. The regional feed can omit other notable reports, so an unflagged species is not a claim of ordinary status.
 
 The first authenticated provider check confirmed the Iona parent-group response contains distinct public member hotspots. The resolver now requires the exact beach name in the current official regional index. A renamed, missing or ambiguous beach fails collection for review rather than falling back to the broader parent.
+
+<!-- schedule-reliability -->
+## Schedule reliability
+
+Public GitHub repositories can have scheduled workflows disabled after 60 days of inactivity. A separate weekly [schedule guard](.github/workflows/schedule-guard.yml) calls GitHub's enable-workflow API for an explicit list of refresh workflows and itself. It can restore workflows disabled for inactivity, preserves manually disabled workflows, and runs independently of collection failures.
+
+This is an interim mitigation, not a scheduling guarantee: GitHub does not document active-workflow renewal as a permanent exemption, and scheduled runs can be delayed or dropped. A scheduler on our own Linux server is the planned independent trigger. The guard does not collect data, create dummy commits, or change source/check timestamps; successful collection and published data freshness still need monitoring.
+<!-- /schedule-reliability -->
