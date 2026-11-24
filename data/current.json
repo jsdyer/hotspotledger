@@ -2,7 +2,7 @@
   "schema": 1,
   "collector_version": 3,
   "status": "ready",
-  "captured_at": "2026-11-23T22:06:04Z",
+  "captured_at": "2026-11-24T12:28:49Z",
   "window_days": 30,
   "records": [
     {
@@ -1798,20 +1798,6 @@
       "east": null
     },
     {
-      "id": "rudtur",
-      "name": "Ruddy Turnstone",
-      "scientific_name": "Arenaria interpres",
-      "west": null,
-      "east": {
-        "date": "2026-10-25 07:25",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S405288930",
-        "notable": false,
-        "reviewed": false,
-        "valid": true
-      }
-    },
-    {
       "id": "rufgro",
       "name": "Ruffed Grouse",
       "scientific_name": "Bonasa umbellus",
@@ -2299,13 +2285,13 @@
   "sources": [
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-BC?fmt=json",
-      "retrieved_at": "2026-11-23T22:05:59Z",
-      "response_sha256": "8ce0ff46f40aafab8f3dc52c2504d4806b89558c097fbbbe8e620472a19b2e6d",
+      "retrieved_at": "2026-11-24T12:28:44Z",
+      "response_sha256": "bfef8725edc00789755bfa9f36e1d4cb79629fc034b160d53aed186fdf0cd3c4",
       "rows": 6774
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L386761/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-23T22:06:00Z",
+      "retrieved_at": "2026-11-24T12:28:44Z",
       "response_sha256": "53d30595ddc4169e6a17bb11650bb40baa94783f59cc8cf7653b0a1eefb3ca10",
       "rows": 80,
       "feed": "recent",
@@ -2314,42 +2300,42 @@
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-BC/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-23T22:06:01Z",
-      "response_sha256": "f89b6e629e7a7174c7779c57b4e0c15889347a953b63e7fe8e7528fe4e8e50f0",
-      "rows": 2151,
+      "retrieved_at": "2026-11-24T12:28:45Z",
+      "response_sha256": "6a4517834b1f96483d73247ee9efd86c8d654ce116df3230cc61727c7e2b27a8",
+      "rows": 2154,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-BC",
       "hotspot_id": "L386761",
       "retained_rows": 0,
-      "excluded_other_locations": 2151
+      "excluded_other_locations": 2154
     },
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-NS?fmt=json",
-      "retrieved_at": "2026-11-23T22:06:02Z",
-      "response_sha256": "8b314f472792db4f27296ffc08e72a61aa758ca34e965456d3f173f324bdfd24",
+      "retrieved_at": "2026-11-24T12:28:47Z",
+      "response_sha256": "a970dbc1f156e94a17b97b990788fd6722bb260feedffa750f83f57cbfd1a3c3",
       "rows": 1696
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L151222/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-23T22:06:03Z",
-      "response_sha256": "352ab97e6b2c0bee0f1ad1b08cec92578e5888ec255df99f045c74dba0b3c1f7",
-      "rows": 102,
+      "retrieved_at": "2026-11-24T12:28:48Z",
+      "response_sha256": "64adb250980bc8cce32b84203bd99cb9b2f0f0e83afb388726930b69e3012c5c",
+      "rows": 101,
       "feed": "recent",
       "scope": "exact hotspot",
       "hotspot_id": "L151222"
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-NS/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-23T22:06:04Z",
-      "response_sha256": "ca17157495f15d2051ff85ad520fa596cbffc03dacbc0ff0fe98e7eb36b76995",
-      "rows": 785,
+      "retrieved_at": "2026-11-24T12:28:49Z",
+      "response_sha256": "e2eee3de0e1abdc16558bddcca541acad3a17e569c6548cd4cb5e6df81818d7c",
+      "rows": 786,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-NS",
       "hotspot_id": "L151222",
-      "retained_rows": 21,
-      "excluded_other_locations": 764
+      "retained_rows": 19,
+      "excluded_other_locations": 767
     }
   ],
   "attribution": "Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.",

@@ -12,5 +12,12 @@
     "sha256": "b325b52063c05304adc7f2fb2f6db6642b83587e33b21302c3763428877d2351",
     "count": 142,
     "window_days": 30
+  },
+  {
+    "captured_at": "2026-11-24T12:28:49Z",
+    "file": "archive/20261124T122849Z-be9169c9e21b.json",
+    "sha256": "be9169c9e21b495e4a6d9dbdb784cf5253634be02b4ab65768f6d53a0292f86c",
+    "count": 141,
+    "window_days": 30
   }
 ]
