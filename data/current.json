@@ -2,7 +2,7 @@
   "schema": 1,
   "collector_version": 3,
   "status": "ready",
-  "captured_at": "2026-11-25T12:26:30Z",
+  "captured_at": "2026-11-25T19:59:02Z",
   "window_days": 30,
   "records": [
     {
@@ -1411,9 +1411,9 @@
       "scientific_name": "Calidris melanotos",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
+        "date": "2026-11-24 07:18",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "checklist": "https://ebird.org/checklist/S412840734",
         "notable": true,
         "reviewed": true,
         "valid": true
@@ -1691,11 +1691,11 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-21 07:45",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412286677",
+        "date": "2026-11-24 07:18",
+        "count": 750,
+        "checklist": "https://ebird.org/checklist/S412840734",
         "notable": false,
-        "reviewed": false,
+        "reviewed": true,
         "valid": true
       }
     },
@@ -1841,20 +1841,6 @@
         "date": "2026-11-20 07:23",
         "count": 1,
         "checklist": "https://ebird.org/checklist/S411787433",
-        "notable": false,
-        "reviewed": false,
-        "valid": true
-      }
-    },
-    {
-      "id": "semplo",
-      "name": "Semipalmated Plover",
-      "scientific_name": "Charadrius semipalmatus",
-      "west": null,
-      "east": {
-        "date": "2026-10-26 09:33",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S405599791",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -2236,13 +2222,13 @@
   "sources": [
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-BC?fmt=json",
-      "retrieved_at": "2026-11-25T12:26:25Z",
-      "response_sha256": "bd4ba21dc90196276b8d2a2f5a1321c17a7ecd41e77406ef8f6e9b4b3f76127d",
+      "retrieved_at": "2026-11-25T19:58:57Z",
+      "response_sha256": "0c34e950719bf6101032bdb32c196f8f7abbe8ef5c54421617f6ccfa166e41da",
       "rows": 6771
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L386761/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-25T12:26:25Z",
+      "retrieved_at": "2026-11-25T19:58:57Z",
       "response_sha256": "7573f0dcdce47b2afa3b390b2f6fa95797bfe640de40a6396054f13b1306bf7a",
       "rows": 79,
       "feed": "recent",
@@ -2251,42 +2237,42 @@
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-BC/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-25T12:26:26Z",
-      "response_sha256": "2b15ff0d908b9737d334dbb749375b45ce85cdfb0c3d48ee8a5da713a853a58d",
-      "rows": 2096,
+      "retrieved_at": "2026-11-25T19:58:59Z",
+      "response_sha256": "8b79e0194e12894f9a16baaf9dfa1534813bc5a803cd566ecd61ec0e0fe7922c",
+      "rows": 2035,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-BC",
       "hotspot_id": "L386761",
       "retained_rows": 0,
-      "excluded_other_locations": 2096
+      "excluded_other_locations": 2035
     },
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-NS?fmt=json",
-      "retrieved_at": "2026-11-25T12:26:27Z",
+      "retrieved_at": "2026-11-25T19:59:00Z",
       "response_sha256": "7be660c0decfcf95c56c6948f8c0ebce2a10753a1612fd43c07fdabe3b8766e2",
       "rows": 1696
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L151222/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-25T12:26:28Z",
-      "response_sha256": "1c2e9c4ae64b0c845fffc8314752ff5d8704982f33f428f2ce46656be82e5c90",
-      "rows": 98,
+      "retrieved_at": "2026-11-25T19:59:01Z",
+      "response_sha256": "28c6d5cbca3ae286b7da2e93f0705024360d675badde0d2f906fab6580ee571e",
+      "rows": 97,
       "feed": "recent",
       "scope": "exact hotspot",
       "hotspot_id": "L151222"
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-NS/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-25T12:26:30Z",
-      "response_sha256": "2f79a2d1cc971f762956fb09edfb099b9f3ce61b381974197e6552f9afd082a9",
-      "rows": 771,
+      "retrieved_at": "2026-11-25T19:59:02Z",
+      "response_sha256": "450317f1c8f140ce82ee9eb632481308fbb088ba98d616a51c4f065402d40685",
+      "rows": 773,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-NS",
       "hotspot_id": "L151222",
       "retained_rows": 19,
-      "excluded_other_locations": 752
+      "excluded_other_locations": 754
     }
   ],
   "attribution": "Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.",
