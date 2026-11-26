@@ -2,7 +2,7 @@
   "schema": 1,
   "collector_version": 3,
   "status": "ready",
-  "captured_at": "2026-11-26T12:28:23Z",
+  "captured_at": "2026-11-26T19:42:29Z",
   "window_days": 30,
   "records": [
     {
@@ -11,9 +11,9 @@
       "scientific_name": "Anas rubripes",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 65,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 102,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -38,33 +38,19 @@
       "name": "American Crow",
       "scientific_name": "Corvus brachyrhynchos",
       "west": {
-        "date": "2026-11-21 09:32",
-        "count": null,
-        "checklist": "https://ebird.org/checklist/S412168204",
+        "date": "2026-11-26 10:08",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413289792",
         "notable": false,
         "reviewed": false,
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 7,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 60,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
-        "valid": true
-      }
-    },
-    {
-      "id": "amgplo",
-      "name": "American Golden-Plover",
-      "scientific_name": "Pluvialis dominica",
-      "west": null,
-      "east": {
-        "date": "2026-10-27 07:32",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S405807493",
-        "notable": true,
-        "reviewed": true,
         "valid": true
       }
     },
@@ -81,9 +67,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 70,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -95,9 +81,9 @@
       "scientific_name": "Larus smithsonianus",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 400,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 12,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -130,9 +116,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 09:43",
+        "date": "2026-11-26 07:27",
         "count": 11,
-        "checklist": "https://ebird.org/checklist/S412372363",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -151,9 +137,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 09:43",
+        "date": "2026-11-26 07:27",
         "count": 2,
-        "checklist": "https://ebird.org/checklist/S412372363",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -165,9 +151,9 @@
       "scientific_name": "Spizelloides arborea",
       "west": null,
       "east": {
-        "date": "2026-11-23 09:38",
-        "count": 3,
-        "checklist": "https://ebird.org/checklist/S412659074",
+        "date": "2026-11-26 07:27",
+        "count": 8,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -227,9 +213,9 @@
       "name": "Bald Eagle",
       "scientific_name": "Haliaeetus leucocephalus",
       "west": {
-        "date": "2026-11-21 09:32",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412168204",
+        "date": "2026-11-26 10:08",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413289792",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -277,9 +263,9 @@
       "scientific_name": "Cepphus grylle",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 3,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 17,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -333,9 +319,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 12,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -375,9 +361,9 @@
       "scientific_name": "Cyanocitta cristata",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
+        "date": "2026-11-26 07:27",
         "count": 5,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -438,9 +424,9 @@
       "scientific_name": "Certhia americana",
       "west": null,
       "east": {
-        "date": "2026-11-20 07:23",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S411787433",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -494,9 +480,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-23 09:38",
-        "count": 90,
-        "checklist": "https://ebird.org/checklist/S412659074",
+        "date": "2026-11-26 07:27",
+        "count": 69,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -508,9 +494,9 @@
       "scientific_name": "Bombycilla cedrorum",
       "west": null,
       "east": {
-        "date": "2026-11-22 09:43",
-        "count": 11,
-        "checklist": "https://ebird.org/checklist/S412372363",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -522,9 +508,9 @@
       "scientific_name": "Somateria mollissima",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 21,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 23,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -557,9 +543,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -613,9 +599,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-23 09:38",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412659074",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -627,11 +613,11 @@
       "scientific_name": "Geothlypis trichas",
       "west": null,
       "east": {
-        "date": "2026-11-08 07:34",
+        "date": "2026-11-26 07:27",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S408990719",
-        "notable": false,
-        "reviewed": false,
+        "checklist": "https://ebird.org/checklist/S413258247",
+        "notable": true,
+        "reviewed": true,
         "valid": true
       }
     },
@@ -669,9 +655,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 8,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -795,9 +781,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 40,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 800,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -836,9 +822,9 @@
       "name": "Glaucous-winged Gull",
       "scientific_name": "Larus glaucescens",
       "west": {
-        "date": "2026-11-20 16:21",
-        "count": 10,
-        "checklist": "https://ebird.org/checklist/S411898337",
+        "date": "2026-11-26 10:08",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413289792",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -858,9 +844,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -991,9 +977,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-21 07:45",
-        "count": 12,
-        "checklist": "https://ebird.org/checklist/S412286677",
+        "date": "2026-11-26 07:27",
+        "count": 9,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1061,9 +1047,9 @@
       "scientific_name": "Larus glaucoides",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 9,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1089,9 +1075,9 @@
       "scientific_name": "Calcarius lapponicus",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
+        "date": "2026-11-26 07:27",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1173,9 +1159,9 @@
       "scientific_name": "Clangula hyemalis",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 3,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 29,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1194,9 +1180,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1257,9 +1243,9 @@
       "scientific_name": "Cardinalis cardinalis",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1278,9 +1264,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 07:42",
+        "date": "2026-11-26 07:27",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1313,9 +1299,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
+        "date": "2026-11-26 07:27",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1474,9 +1460,9 @@
       "scientific_name": "Spinus pinus",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 20,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 19,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1530,9 +1516,9 @@
       "scientific_name": "Haemorhous purpureus",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 8,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 6,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1579,9 +1565,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 13,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 32,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1600,9 +1586,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-22 07:42",
-        "count": 3,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "date": "2026-11-26 07:27",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1656,9 +1642,9 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 6,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1691,11 +1677,11 @@
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 750,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 45,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
-        "reviewed": true,
+        "reviewed": false,
         "valid": true
       }
     },
@@ -1719,9 +1705,9 @@
       "scientific_name": "Phasianus colchicus",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 3,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1733,9 +1719,9 @@
       "scientific_name": "Columba livia",
       "west": null,
       "east": {
-        "date": "2026-11-24 07:18",
-        "count": 14,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "date": "2026-11-26 07:27",
+        "count": 23,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -1914,33 +1900,19 @@
       "name": "Song Sparrow",
       "scientific_name": "Melospiza melodia",
       "west": {
-        "date": "2026-11-21 09:32",
-        "count": 5,
-        "checklist": "https://ebird.org/checklist/S412168204",
+        "date": "2026-11-26 10:08",
+        "count": 1,
+        "checklist": "https://ebird.org/checklist/S413289792",
         "notable": false,
         "reviewed": false,
         "valid": true
       },
       "east": {
-        "date": "2026-11-24 07:18",
+        "date": "2026-11-26 07:27",
         "count": 12,
-        "checklist": "https://ebird.org/checklist/S412840734",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
-        "valid": true
-      }
-    },
-    {
-      "id": "sposan",
-      "name": "Spotted Sandpiper",
-      "scientific_name": "Actitis macularius",
-      "west": null,
-      "east": {
-        "date": "2026-10-27 07:47",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S405901161",
-        "notable": true,
-        "reviewed": true,
         "valid": true
       }
     },
@@ -1985,9 +1957,9 @@
       "scientific_name": "Melospiza georgiana",
       "west": null,
       "east": {
-        "date": "2026-11-21 07:22",
+        "date": "2026-11-26 07:27",
         "count": 2,
-        "checklist": "https://ebird.org/checklist/S412198045",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -2068,9 +2040,9 @@
       "name": "Western Meadowlark",
       "scientific_name": "Sturnella neglecta",
       "west": {
-        "date": "2026-11-21 09:32",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S412168204",
+        "date": "2026-11-26 10:08",
+        "count": 4,
+        "checklist": "https://ebird.org/checklist/S413289792",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -2160,9 +2132,9 @@
       "scientific_name": "Gallinago delicata",
       "west": null,
       "east": {
-        "date": "2026-11-22 07:42",
+        "date": "2026-11-26 07:27",
         "count": 1,
-        "checklist": "https://ebird.org/checklist/S412351755",
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": true,
         "reviewed": true,
         "valid": true
@@ -2188,9 +2160,9 @@
       "scientific_name": "Setophaga coronata",
       "west": null,
       "east": {
-        "date": "2026-11-22 09:43",
-        "count": 2,
-        "checklist": "https://ebird.org/checklist/S412372363",
+        "date": "2026-11-26 07:27",
+        "count": 7,
+        "checklist": "https://ebird.org/checklist/S413258247",
         "notable": false,
         "reviewed": false,
         "valid": true
@@ -2222,14 +2194,14 @@
   "sources": [
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-BC?fmt=json",
-      "retrieved_at": "2026-11-26T12:28:18Z",
-      "response_sha256": "b1dcd000b09f4b3110e88084ccf5b9aebfbaf78f393fd0525fd228ea4b27ca14",
+      "retrieved_at": "2026-11-26T19:42:24Z",
+      "response_sha256": "d149dd251dff4e7b0d665ebd880e8f2bd085b20e7e979c7f7ae406ec2a2ea6c9",
       "rows": 6771
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L386761/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-26T12:28:19Z",
-      "response_sha256": "ac3339a7c56b48ab768968992f37939114d011b7502342d46c31d75706b6693c",
+      "retrieved_at": "2026-11-26T19:42:25Z",
+      "response_sha256": "f87c2c5869dee122614cc19ec9bd5cf6ef6a83874bc05d074c684e01c8d0a46c",
       "rows": 79,
       "feed": "recent",
       "scope": "exact hotspot",
@@ -2237,42 +2209,42 @@
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-BC/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-26T12:28:20Z",
-      "response_sha256": "b9697fe09422d12e795866745ead2671aced78f746fb0abb40807346108be417",
-      "rows": 2008,
+      "retrieved_at": "2026-11-26T19:42:26Z",
+      "response_sha256": "f217bc7930fe8d2a75fe7118df63ac0912f58aed45c4c899c14f2ac4acab28f1",
+      "rows": 1965,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-BC",
       "hotspot_id": "L386761",
       "retained_rows": 0,
-      "excluded_other_locations": 2008
+      "excluded_other_locations": 1965
     },
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-NS?fmt=json",
-      "retrieved_at": "2026-11-26T12:28:21Z",
+      "retrieved_at": "2026-11-26T19:42:27Z",
       "response_sha256": "4110a9cb0d2f88c4b40a365ceacdd21658ae40dc258fa527241e20c2d8bbda99",
       "rows": 1696
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L151222/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-26T12:28:22Z",
-      "response_sha256": "28c6d5cbca3ae286b7da2e93f0705024360d675badde0d2f906fab6580ee571e",
-      "rows": 97,
+      "retrieved_at": "2026-11-26T19:42:28Z",
+      "response_sha256": "530ff01292f56c35d456d10a4501801caac4700726b9ab7dfd3efa953ecbe022",
+      "rows": 95,
       "feed": "recent",
       "scope": "exact hotspot",
       "hotspot_id": "L151222"
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-NS/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-26T12:28:23Z",
-      "response_sha256": "9d432bed425f7ac4b112e74db8e002d32f081eb15c7085d5397528cb74ec9556",
-      "rows": 777,
+      "retrieved_at": "2026-11-26T19:42:29Z",
+      "response_sha256": "ccee322fe523fe77cb68954104ef5fcfc3484d4b38389a129991ca92e6e78194",
+      "rows": 778,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-NS",
       "hotspot_id": "L151222",
-      "retained_rows": 19,
-      "excluded_other_locations": 758
+      "retained_rows": 18,
+      "excluded_other_locations": 760
     }
   ],
   "attribution": "Derived from eBird.org, Cornell Lab of Ornithology, and its contributors.",
