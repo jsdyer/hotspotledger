@@ -68,5 +68,12 @@
     "sha256": "f8d4674cc96df4b3b0365316cc51256e8369259b2c153fa75c9a9e0aa9a85d79",
     "count": 135,
     "window_days": 30
+  },
+  {
+    "captured_at": "2026-11-28T12:31:40Z",
+    "file": "archive/20261128T123140Z-8ae7dc0ace46.json",
+    "sha256": "8ae7dc0ace462024f9ea804332e71125be6b4a3b467aa2598e923511ca2a4006",
+    "count": 134,
+    "window_days": 30
   }
 ]

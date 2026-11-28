@@ -2,7 +2,7 @@
   "schema": 1,
   "collector_version": 3,
   "status": "ready",
-  "captured_at": "2026-11-27T19:31:54Z",
+  "captured_at": "2026-11-28T12:31:40Z",
   "window_days": 30,
   "records": [
     {
@@ -1126,20 +1126,6 @@
       "east": null
     },
     {
-      "id": "linspa",
-      "name": "Lincoln's Sparrow",
-      "scientific_name": "Melospiza lincolnii",
-      "west": {
-        "date": "2026-10-28 17:42",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S406199268",
-        "notable": false,
-        "reviewed": false,
-        "valid": true
-      },
-      "east": null
-    },
-    {
       "id": "lobdow",
       "name": "Long-billed Dowitcher",
       "scientific_name": "Limnodromus scolopaceus",
@@ -1423,14 +1409,7 @@
       "id": "perfal",
       "name": "Peregrine Falcon",
       "scientific_name": "Falco peregrinus",
-      "west": {
-        "date": "2026-10-28 17:42",
-        "count": 1,
-        "checklist": "https://ebird.org/checklist/S406199268",
-        "notable": false,
-        "reviewed": false,
-        "valid": true
-      },
+      "west": null,
       "east": {
         "date": "2026-11-24 07:18",
         "count": 1,
@@ -2194,40 +2173,40 @@
   "sources": [
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-BC?fmt=json",
-      "retrieved_at": "2026-11-27T19:31:49Z",
-      "response_sha256": "94980207c4fa5dce5047549a09fe86603e3dea8fbec3dc2ec39f1f06e7d5677a",
-      "rows": 6771
+      "retrieved_at": "2026-11-28T12:31:35Z",
+      "response_sha256": "77886a99f7c930c5f450d949f6f855336a6c24d6cfd2978982e8804a777177ff",
+      "rows": 6770
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L386761/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-27T19:31:49Z",
-      "response_sha256": "f87c2c5869dee122614cc19ec9bd5cf6ef6a83874bc05d074c684e01c8d0a46c",
-      "rows": 79,
+      "retrieved_at": "2026-11-28T12:31:35Z",
+      "response_sha256": "16c5dbc0da4193423e8046d48563d449b4932b66eaa817cefb6b6941d8821a31",
+      "rows": 77,
       "feed": "recent",
       "scope": "exact hotspot",
       "hotspot_id": "L386761"
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-BC/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-27T19:31:50Z",
-      "response_sha256": "768f13baade1898ea3455a68cc5c565a2719f7ef08c25fdb18dc35030b386356",
-      "rows": 1905,
+      "retrieved_at": "2026-11-28T12:31:36Z",
+      "response_sha256": "00a1dce495569a48b0603874369c3c522627717bdef21cf4a2ce36135bf741cd",
+      "rows": 1920,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
       "region": "CA-BC",
       "hotspot_id": "L386761",
       "retained_rows": 0,
-      "excluded_other_locations": 1905
+      "excluded_other_locations": 1920
     },
     {
       "url": "https://api.ebird.org/v2/ref/hotspot/CA-NS?fmt=json",
-      "retrieved_at": "2026-11-27T19:31:52Z",
-      "response_sha256": "a65e1f33cd0b75778b8e15e46f46b0ef57137c0e37dc77cf696d1eec9eee1f67",
+      "retrieved_at": "2026-11-28T12:31:37Z",
+      "response_sha256": "bba9207e0bd4a5991042f2b9ec597b6a82d6edb2516ad3646db71a430b09bde8",
       "rows": 1696
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/L151222/recent?back=30&cat=species&maxResults=10000&includeProvisional=false&sort=date",
-      "retrieved_at": "2026-11-27T19:31:53Z",
+      "retrieved_at": "2026-11-28T12:31:38Z",
       "response_sha256": "530ff01292f56c35d456d10a4501801caac4700726b9ab7dfd3efa953ecbe022",
       "rows": 95,
       "feed": "recent",
@@ -2236,8 +2215,8 @@
     },
     {
       "url": "https://api.ebird.org/v2/data/obs/CA-NS/recent/notable?back=30&maxResults=10000&detail=simple&hotspot=true",
-      "retrieved_at": "2026-11-27T19:31:54Z",
-      "response_sha256": "2b05e1cb37b5e0bd5870d73813d479a44b8aaa3efc6f518b0810f3261499adbd",
+      "retrieved_at": "2026-11-28T12:31:40Z",
+      "response_sha256": "36ec80b75315b6c403bf673866eec94cd6367cde46cd6fdd6b60d684ceab37fd",
       "rows": 776,
       "feed": "notable",
       "scope": "province filtered to exact hotspot",
